@@ -1,5 +1,7 @@
 import React, { useState, createContext } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 import { api_Key } from "./../api/config";
 
@@ -21,6 +23,31 @@ const ImageContextProvider = (props) => {
         console.log(
           " there is a problem with fetching and parsing data",
           error
+        );
+        toast("there is a problem with fetching and parsing data", {
+          position: "bottom-right",
+          type: "error",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        toast(
+          "please check your network connection and make sure your vpn is connected!",
+          {
+            position: "bottom-right",
+            type: "default",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          }
         );
       });
   };

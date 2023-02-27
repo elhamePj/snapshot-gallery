@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import ImagesList from "./components/imagesList";
 import Header from "./components/header";
@@ -24,6 +25,18 @@ function App() {
       <ImageContextProvider>
         <Header handleSearchButton={handleSearchButton} />
         <Navigation />
+        <ToastContainer
+        // position="top-left"
+        // autoClose={5000}
+        // hideProgressBar={false}
+        // newestOnTop={false}
+        // closeOnClick
+        // rtl={false}
+        // pauseOnFocusLoss
+        // draggable
+        // pauseOnHover
+        // theme="dark"
+        />
 
         <div className="content">
           <Routes>
