@@ -1,5 +1,5 @@
 # snapshot-gallery
 an image gallery app
 
-#demo
+# demo
  https://elhamepj.github.io/snapshot-gallery/
