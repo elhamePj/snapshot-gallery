@@ -16,7 +16,6 @@ const ImageContextProvider = (props) => {
       )
       .then((response) => {
         setImages(response.data.photos.photo);
-        console.log(response);
       })
 
       .catch((error) => {

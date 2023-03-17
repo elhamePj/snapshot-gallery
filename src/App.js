@@ -25,22 +25,15 @@ function App() {
       <ImageContextProvider>
         <Header handleSearchButton={handleSearchButton} />
         <Navigation />
-        <ToastContainer
-        // position="top-left"
-        // autoClose={5000}
-        // hideProgressBar={false}
-        // newestOnTop={false}
-        // closeOnClick
-        // rtl={false}
-        // pauseOnFocusLoss
-        // draggable
-        // pauseOnHover
-        // theme="dark"
-        />
+        <ToastContainer />
 
         <div className="content">
           <Routes>
             <Route path="/" element={<ImagesList topic="mountain" />} />
+            <Route
+              path="/snapshot-gallery"
+              element={<ImagesList topic="mountain" />}
+            />
             <Route path="/mountain" element={<ImagesList topic="mountain" />} />
             <Route path="/birds" element={<ImagesList topic="bird" />} />
             <Route path="/beaches" element={<ImagesList topic="beach" />} />
